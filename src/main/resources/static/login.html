@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>static登陆</title>
+</head>
+<body>
+	<h1>登陆</h1>
+	<form method="post" action="/login">
+	    <div>
+	        用户名：<input type="text" name="username">
+	    </div>
+	    <div>
+	        密码：<input type="password" name="password">
+	    </div>
+	    
+	    <span style="display: inline">
+		    <input type="text" name="imageCode" placeholder="验证码" style="width: 5%;"/>
+		    <img src="/code/image"/>
+	    </span>
+	    
+	    <input type="checkbox" name="remember-me"/> 
+	    
+	    <div>
+	        <button type="submit">立即登陆</button>
+	    </div>
+	</form>
+	
+	<!-- 短信验证 -->
+	<!-- <form class="login-page" action="/login" method="post">
+	    <div class="form">
+	        <h3>短信验证码登录</h3>
+	        <input type="text" placeholder="手机号" name="mobile" value="17777777777" required="required"/>
+	        <span style="display: inline">
+	            <input type="text" name="smsCode" placeholder="短信验证码" style="width: 10%;"/>
+	            <a href="/code/sms?mobile=17777777771">发送验证码</a>
+	        </span>
+	        <button type="submit">登录</button>
+	    </div>
+	</form> -->
+	
+</body>
+</html>

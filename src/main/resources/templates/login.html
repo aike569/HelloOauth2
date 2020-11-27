@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>templates登陆</title>
+</head>
+<body>
+	<h1>登陆</h1>
+	<form method="post" action="/su">
+	    <div>
+	        用户名：<input type="text" name="username">
+	    </div>
+	    <div>
+	        密码：<input type="password" name="password">
+	    </div>
+	    
+	    <span style="display: inline">
+		    <input type="text" name="imageCode" placeholder="验证码" style="width: 50%;"/>
+		    <img src="/code/image"/>
+	    </span>
+	    
+	    <div>
+	        <button type="submit">立即登陆</button>
+	    </div>
+	</form>
+	
+</body>
+</html>
